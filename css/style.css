@@ -112,22 +112,22 @@ a:hover, a:focus, a:active, a:visited {
 .hero-header {
 	background: #36a1ab;
 	min-height: 600px;
-	padding: 5em;
+	padding: 4em;
 	color: #fff;
 }
 .hero-header h1 {
-    margin-top: -20px;
+    /* margin-top:; */
     color: #071b1d;
-    font-family: 'Clash Display', sans-serif;;
-    font-size: 120px;
-    font-weight: bold;
-	margin: 1em 0 0 0;
+    font-family: 'Bebas Neue', sans-serif;;
+    font-size: 180px;
+    font-weight: bolder;
     margin-left: 20%;
+    font-stretch: wider;
 }
 .hero-header h3{
     font-family: 'Supreme', sans-serif;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 60px;
     margin-left: 20%;
 }
 .hero-header h4 {
@@ -141,28 +141,29 @@ a:hover, a:focus, a:active, a:visited {
 	max-width: 180px;
 }
 .hero-header .btn {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1200;
     margin-left: 20%;
 	margin-top: 30px;
 }
 .hero-header .rocket {
     margin-left: -30px;
-    margin-top: 60px;
+    margin-top: 120px;
 	max-width: 100%;
 }
 .me-row {
-	padding: 0px 0;
+	margin-top: 40px ;
 }
 .row-title {
     font-family: 'Poppins', sans-serif;
-    margin-top: 10%;
-    margin-bottom: 2%;
+    margin-top: 2%;
     font-size: 70px;
 	font-weight: 1000;
 }
 .feature h3{
     font-family: 'Inter', sans-serif;
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 32px;
+    font-weight: bolder;
 
 }
 .feature p{
@@ -171,9 +172,8 @@ a:hover, a:focus, a:active, a:visited {
     font-weight: 100;
 }
 .feature {
-    margin-left: -20px;
-	padding: 30px;
-	margin-top: 30px;
+	padding: 50px;
+	margin-top: 20px;
 }
 .feature span {
 	font-size: 5em;
