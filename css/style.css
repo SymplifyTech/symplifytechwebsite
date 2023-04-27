@@ -111,8 +111,8 @@ a:hover, a:focus, a:active, a:visited {
 
 .hero-header {
 	background: #36a1ab;
-	min-height: 600px;
-	padding: 4em;
+	min-height: 100px;
+	padding: 8em;
 	color: #fff;
 }
 .hero-header h1 {
@@ -121,29 +121,34 @@ a:hover, a:focus, a:active, a:visited {
     font-family: 'Bebas Neue', sans-serif;;
     font-size: 180px;
     font-weight: bolder;
-    margin-left: 20%;
+    margin-left: 10%;
     font-stretch: wider;
 }
 .hero-header h3{
     font-family: 'Supreme', sans-serif;
     font-weight: bold;
     font-size: 60px;
-    margin-left: 20%;
+    margin-left: 10%;
 }
 .hero-header h4 {
 	font-weight: normal;
 	opacity: 0.6;
     letter-spacing: 1px;
     margin: 2em 0;
-    margin-left: 20%;
+    margin-left: 10%;
 }
 .hero-header .logo {
 	max-width: 180px;
 }
+.images img{
+    
+    width: 700px;
+    height: 700px;
+}
 .hero-header .btn {
     font-family: 'Roboto', sans-serif;
     font-weight: 1200;
-    margin-left: 20%;
+    margin-left: 10%;
 	margin-top: 30px;
 }
 .hero-header .rocket {
@@ -151,17 +156,64 @@ a:hover, a:focus, a:active, a:visited {
     margin-top: 120px;
 	max-width: 100%;
 }
+.blogging-img img{
+    width: 650px;
+    height: 650px;
+    text-align: center;
+}
+.blogging-img h1{
+    margin-top: 180px;;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: left;
+    font-size: 55px;
+    font-weight:550;
+}
+.blogging-img h3{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.customer img{
+    width: 650px;
+    height: 650px;
+    text-align: center;
+}
+.customer h1{
+    margin-top: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: right;
+    font-size: 55px;
+    font-weight:550;
+    margin-left: 100px;
+}
+.customer h3{
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-size: 18px;
+    margin-left: 100px;
+}
+.customer{
+    
+    margin-top: 100px;;
+    margin-bottom: 100px;
+}
 .me-row {
 	margin-top: 40px ;
 }
+.me-row img{
+    width: 120px;
+    height: 120px;
+    color-scheme: #016cc7;
+}
 .row-title {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     margin-top: 2%;
-    font-size: 70px;
+    font-size: 120px;
 	font-weight: 1000;
 }
 .feature h3{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 32px;
     font-weight: bolder;
 
@@ -172,6 +224,7 @@ a:hover, a:focus, a:active, a:visited {
     font-weight: 100;
 }
 .feature {
+ 
 	padding: 50px;
 	margin-top: 20px;
 }
@@ -179,7 +232,10 @@ a:hover, a:focus, a:active, a:visited {
 	font-size: 5em;
     color: #016cc7;
 }
-
+.speaker .feature{
+    width: 1000px;
+    height: 650px;
+}
 .speaker .feature {
 	width: 31.333333%;
 	-webkit-transition: all 0.3s;
