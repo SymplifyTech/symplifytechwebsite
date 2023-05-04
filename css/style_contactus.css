@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+:root{
+    --main-hue: #208;
+    --text-color: #000;
+    --main-color: #17768A;
+    --main-color-hover: hsl(208, 77%, 48%);
+    --nav-color: hsl(208, 17%, 79%);
+    --light-color: #9ca7b6;
+    --bg-color: whitesmoke;
+    --primary-light: #8EC9D6;
+    --dark-brown: #263238;
+    --gray-1: #798092;
+    --gray-3: #a9b4b9;
+    --gray-2: #E6E6ED;
+    --text-color-light: #E6E6ED;
+    --white: #FFFFFF;
+}
+*, 
+*::before, 
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: "Poppins", sans-serif;
+   
+}
+
+.dark{
+    --bg-color: hsl(208, 30%, 16.5%);
+    --input-bg: hsla(208, 22%, 50%, 11%);
+    --input-bg-hover: hsl(208, 22%, 50%, 18.5%);
+    --nav-color:  hsl(208, 10%, 47%);
+    --light-text-color: hsl(208, 12%, 46%);
+    --input-text: hsl(208, 10%, 55%);
+    --input-shadow: hsla(208, 92%, 58%, 0.2);
+    --text-color: #fff 
+
+}
+.dark .logo img.logo-forDark{
+    opacity: 1;
+}
+.dark .logo img.logo-forLight{
+    opacity: 0;
+}
+.dark #dashed-wave{
+    opacity: 0.3s;
+}
+.transition{
+    transition: 1s cubic-bezier(0.4, 0.1, 0.4, 1) !important;
+}
+a{
+    text-decoration: none;
+}
+
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: hsla(208, 30%, 16.5%, 80%);
+    z-index: 2;
+    opacity: 0;
+}
+.dark .background{
+    opacity: 1;
+}
+
+
+header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+header .container{
+    max-width: 82rem;
+    /* background-color: red; */
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 65px;
+    display: flex;
+    align-items: flex-end;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+}
+.logo .images{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.logo img{
+    height: 35px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-right: 0.8rem;
+}
+.logo img.logo-forDark{
+    opacity: 0;
+}
+.logo h2{
+    color: var(--text-color);
+    font-size: 1.55rem;
+    margin-top: 2px;
+}
+.logo h2 span{
+    color: var(--main-color);
+}
+.nav-link{
+    margin-left: 5.5rem;
+    padding: 0 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+.nav-link:hover{
+    color: var(--main-color);
+}
+.nav-link.theme-toggle{
+    cursor: pointer;
+}
+.theme-toggle .fa-moon{
+    display: none;
+}
+.theme-toggle .fa-sun{
+    display: inline;
+}
+
+.dark .theme-toggle .fa-moon{
+    display: inline;
+}
+.dark .theme-toggle .fa-sun{
+    display: none;
+}
+
+
+.contact{
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+.contact .container{
+    height: 100vh;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+.contact .container > div{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.left{
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+
+    padding: 65px 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+.contact-heading h1{
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 3.5rem;
+    line-height: 0.9;
+    white-space: nowrap;
+    margin-bottom: 1.2rem;
+}
+.contact-heading h1 span{
+    color: var(--main-color);
+}
+.text{
+    color: var(--light-color) ;
+    line-height: 1.1;
+    font-size: 1rem;
+}
+.text a{
+    color: var(--main-color);
+    transition: 0.3s;
+}
+.text a:hover{
+    color: var(--primary-light);
+    transition: 0.3s;
+}
+.form-wrapper{
+    max-width: 32rem;;
+}
+.contact-form{
+    display: grid;
+    margin-top: 2.55rem;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+}
+.input-wrap{
+    position: relative;
+}
+.input-wrap.w-100{
+    grid-column: span 2;
+}
+
+.contact-input{
+    width: 100%;
+    background-color: hsla(205, 50%, 50%, 6.5%);
+    padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    border-radius: 20px;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 0px var(--primary-light);
+    transition: 0.3s;
+}
+.contact-input:hover{
+    background-color: hsla(204, 41%, 82%, 0.021) ;
+}
+.input-wrap label{
+    position: absolute;   
+    top: 50%;
+    left: calc(1.35rem + 2px);
+    transform: translateY(-50%);
+    color: var(--light-color);
+    pointer-events: none;
+    transition: 0.3s;
+}
+.input-wrap .icon{
+    position: absolute;
+    right: calc(1.35rem + 2px);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--gray-3);
+    font-size: 1.25rem;
+    transition: 0.3s;
+
+}
+textarea.contact-input{
+    resize: none;
+    width: 100%;
+    min-height: 150px;
+}
+textarea.contact-input ~ label{
+    top: 1.2rem;
+    transform: none;
+}
+textarea.contact-input ~ .icon{
+    top: 1.3rem;
+    transform: none;
+}
+.input-wrap.focus .contact-input{
+    background-color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 0 2px var(--primary-light);
+}
+.input-wrap.focus label{
+    color: var(--light-color);
+
+}
+.input-wrap.focus .icon{
+    color: var(--light-color);
+    
+}
+.input-wrap.not-empty label{
+    font-size: 0.66rem;
+    top: 0.75rem;
+    transform: translateY(0);
+}
+.contact-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    grid-column: span 2;
+
+}
+.btn{
+    display: inline-block;
+    padding: 1.1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--text-color-light);
+    border-radius: 40px;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color: var(--primary-light) ;
+
+}
+.btn.upload{
+    position: relative;
+    background-color: var(--gray-1);
+}
+.btn.upload:hover{
+    background-color: var(--dark-brown);
+}
+.btn.upload span{
+    color: var(--gray-2);
+}
+.btn.upload input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color) ;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.right{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    pointer-events: none;
+}
+.image-wrapper{
+    position: relative;
+    grid-column: 2;
+}
+.image-wrapper .img{
+    position: absolute;
+    height: 100%;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.dark .image-wrapper .img{
+    transform: translate(-50%, -50%) scale(1.7);
+}
+.wave-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    background-color: var(--bg-color);
+    filter: blur(0px);
+}
+.wave-wrap svg{
+    position: absolute;
+    height: calc(100% - 0px);
+    top: 50%;
+    transform: translateY(-50%) scaleX(1);
+    left: calc(100% - 2px);
+    transform-origin: left;
+}
+
+#wave{
+    fill: var(--bg-color);
+    height: 100%;
+}
+.dark .wave-wrap svg{
+    transform: translateY(-50%) scaleX(0);
+}
+.dark .wave-wrap{
+    transform: scale(1.8);
+    filter: blur(55px);
+}
+
+.dashed-wave{
+    position: absolute;
+    z-index: 3;
+    height: 130%;
+    bottom: 60%;
+    left: -28px;
+    transform: translateY(50%);
+}
+#dashed-wave{
+    fill: none;
+    stroke: #000;
+    stroke-width: 1px;
+    stroke-dasharray: 6.5;
+    opacity: 0.8;
+}
+
+@media (max-width: 1000px){
+    .logo{
+        margin-right: 1rem;
+    }
+    .logo img{
+        height: 30px;
+        margin-right: 0.7rem;
+    }
+    .logo h2{
+        font-size: 1.3rem;
+    }
+    .nav-link{
+        margin-left: 3.5rem;
+        padding: 0 0.8rem;
+        font-size: .9rem;
+    }   
+    .nav-link.theme-toggle{
+        font-size: 1rem;
+    }
+    .contact-heading h1{
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        white-space: normal;
+    }
+    .text{
+        font-size: 0.9rem;
+    }
+    .contact-form{
+        display: grid;
+        margin-top: 1.9rem;
+        column-gap: 0.8rem;
+        row-gap: 0.65rem;
+    }
+    .contact-input{
+        border-radius: 17px;
+        font-size: 0.87rem;
+        padding: 1.5rem 1.2rem calc(0.75rem - 2px) 1.25rem;
+    }
+    .input-wrap label{
+        font-size: 0.91rem;
+        left: calc(1.2rem + 2px);
+    }
+    .input-wrap .icon{
+        font-size: 1.1rem;
+        right: calc(1.2rem + 2px);
+    }
+    textarea.contact-input ~ label{
+        top: 1.2rem;
+    }
+    textarea.contact-input ~ .icon{
+        top: 1.33rem;
+    }
+    .input-wrap.focus .contact-input{
+        box-shadow: 0 0 0 3.5px var(--input-shadow);
+    }
+    .input-wrap.not-empty label{
+        font-size: 0.61rem;
+    }
+    .contact-buttons{
+        column-gap: 0.8rem;
+        margin-top: 0.45rem;
+    }
+    .btn{
+        padding: 1rem 1.5rem;
+        font-size: 0.87rem;
+    }
+    .dashed-wave{
+        bottom: 55%;
+        left: -10px;
+    }
+
+    #dashed-wave{
+        stroke-width: 0.7px;
+        stroke-dasharray: 6;
+    }
+
+    .wave-wrap{
+        transform: translateX(-10%);
+    }
+    .wave-wrap svg{
+        height: calc(110% + 10px);
+        transform: translate(-5%, -5%);
+    }
+}
+
+@media (max-width: 650px) {
+    header .container{
+        height: 50px;
+    }
+    .left{
+        padding: 50px 1.5rem 0;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .form-wrapper{
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    header ul{
+        justify-content: space-between;
+        width: 100%;
+    }
+    .logo{
+        margin-right: 0;
+    }
+    .nav-link{
+        margin-left: 0;
+    }
+    .right{
+        display: none;
+    }
+
+}
+
+@media (max-width: 440px) {
+    .input-wrap{
+        grid-column: span 2;
+    }
+    .contact-buttons{
+        grid-template-columns: 1fr;
+        row-gap: 0.5rem;
+    }
+    .contact-heading h1{
+        font-size: 1.9rem;
+        line-height: 1;
+    }
+    .logo img{
+        height: 25px;
+        margin-right: 0.7rem;
+    }
+    .logo h2{
+        font-size: 1.15rem;
+    }
+
+}
