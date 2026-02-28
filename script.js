@@ -1,3 +1,5 @@
+import { createClient } from '@supabase/supabase-js';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar scroll background change
     const navbar = document.querySelector('.navbar');
@@ -133,4 +135,52 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Supabase Contact Form Logic
+    const form = document.getElementById('contact-form');
+    if (form) {
+        const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+        const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+        const supabase = createClient(supabaseUrl, supabaseKey);
+
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMessage = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Stop normal form submission
+            
+            // UI feedback
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            // Get data from form
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
+
+            // Send to Supabase
+            const { error } = await supabase
+                .from('contacts')
+                .insert([data]);
+
+            // Handle response
+            statusMessage.style.display = 'block';
+            if (error) {
+                console.error('Supabase error:', error);
+                statusMessage.textContent = 'Something went wrong. Please try again.';
+                statusMessage.style.color = '#ef4444'; // Red
+            } else {
+                statusMessage.textContent = 'Message sent successfully! We will get back to you soon.';
+                statusMessage.style.color = '#10b981'; // Green
+                form.reset(); // Clear form
+            }
+
+            // Restore button
+            submitBtn.textContent = 'Send Message';
+            submitBtn.disabled = false;
+        });
+    }
 });
