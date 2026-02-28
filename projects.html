@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - Sympifytech</title>
+    <meta name="description" content="Explore Sympifytech's portfolio including VetEase, Spoto, and Ternout.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            padding: 4rem 0 8rem;
+        }
+
+        .project-card {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            background: var(--clr-surface);
+            border: 1px solid var(--clr-surface-border);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .project-card:nth-child(even) {
+            grid-template-columns: 1fr 1.2fr;
+        }
+
+        .project-card:nth-child(even) .project-image {
+            order: 2;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: rgba(59, 130, 246, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            background: linear-gradient(135deg, var(--clr-bg-subtle), var(--clr-bg));
+            height: 100%;
+            min-height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at top right, var(--clr-primary-glow), transparent 70%);
+            opacity: 0.5;
+        }
+
+        .project-content {
+            padding: 3rem;
+        }
+
+        .project-logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--clr-text);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-description {
+            color: var(--clr-text-muted);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--clr-surface-border);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--clr-accent);
+        }
+
+        @media (max-width: 992px) {
+
+            .project-card,
+            .project-card:nth-child(even) {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card:nth-child(even) .project-image {
+                order: 0;
+            }
+
+            .project-image {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow blob-1"></div>
+        <div class="glow blob-2"></div>
+    </div>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon-svg">
+                        <path d="M12 2L2 7L12 12V22L22 17V7L12 2Z" fill="currentColor" />
+                    </svg>
+                </span>
+                Sympifytech
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html" style="color: var(--clr-primary); font-weight: 600;">Projects</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+                </button>
+                <a href="contact.html" class="btn btn-primary">Get a Proposal</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <div class="badge">Our Portfolio</div>
+                <h1 class="hero-title">Selected <span class="text-gradient">Projects</span></h1>
+                <p class="hero-subtitle">Discover how we've engineered success for our partners.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="projects-grid">
+
+                <!-- VetEase Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--clr-primary)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-logo">
+                            VetEase
+                        </div>
+                        <p class="project-description">A comprehensive veterinary clinic management system designed to
+                            streamline appointments, patient records, and billing. Built from the ground up to replace
+                            outdated legacy systems with a modern, cloud-first approach.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">AWS ECS</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Read Case Study</a>
+                    </div>
+                </div>
+
+                <!-- Spoto Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--clr-secondary)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-logo">
+                            Spoto
+                        </div>
+                        <p class="project-description">An intelligent location-based discovery platform that connects
+                            users with nearby experiences and venues. Features a high-performance GraphQL API that
+                            handles thousands of concurrent geo-spatial queries.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Read Case Study</a>
+                    </div>
+                </div>
+
+                <!-- Ternout Project -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--clr-accent)"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-logo">
+                            Ternout
+                        </div>
+                        <p class="project-description">A cutting-edge event management and real-time analytics dashboard
+                            for large-scale corporate conferences. Capable of processing real-time attendee data streams
+                            to provide actionable insights for organizers.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">WebSockets</span>
+                            <span class="tech-tag">Apache Kafka</span>
+                            <span class="tech-tag">Tailwind</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Read Case Study</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-container glass-panel">
+                <div class="cta-content">
+                    <h2>Ready to be our next success story?</h2>
+                    <p>Let's architect the perfect solution for your business.</p>
+                </div>
+                <div class="cta-action">
+                    <a href="contact.html" class="btn btn-primary btn-large">Start a Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon-svg">
+                            <path d="M12 2L2 7L12 12V22L22 17V7L12 2Z" fill="currentColor" />
+                        </svg>
+                    </span>
+                    Sympifytech
+                </a>
+                <p>Empowering businesses through innovative technology solutions since 2018.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="projects.html">Case Studies</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Sympifytech. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
