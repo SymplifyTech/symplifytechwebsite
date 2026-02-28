@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sympifytech</title>
+    <meta name="description" content="Learn about Sympifytech, our mission, and our team of IT experts.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            padding: 4rem 0;
+        }
+
+        .about-text h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .about-text p {
+            color: var(--clr-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            background: linear-gradient(45deg, var(--clr-primary-glow), rgba(139, 92, 246, 0.2));
+            border-radius: 20px;
+            aspect-ratio: 4/3;
+            border: 1px solid var(--clr-surface-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, transparent, var(--clr-bg-subtle));
+            opacity: 0.8;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .value-card {
+            background: var(--clr-surface);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--clr-surface-border);
+            text-align: center;
+        }
+
+        .value-card h3 {
+            margin: 1rem 0;
+            color: var(--clr-primary);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow blob-1"></div>
+        <div class="glow blob-2"></div>
+    </div>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon-svg">
+                        <path d="M12 2L2 7L12 12V22L22 17V7L12 2Z" fill="currentColor" />
+                    </svg>
+                </span>
+                Sympifytech
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="about.html" style="color: var(--clr-primary); font-weight: 600;">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg id="theme-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+                </button>
+                <a href="contact.html" class="btn btn-primary">Get a Proposal</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <div class="badge">Who We Are</div>
+                <h1 class="hero-title">About <span class="text-gradient">Sympifytech</span></h1>
+                <p class="hero-subtitle">Engineering the future of enterprise software.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Driven by Innovation. Defined by Quality.</h2>
+                    <p>At Sympifytech, we believe technology should be an enabler, not an obstacle. Founded by a team of
+                        passionate engineers, our mission is to simplify complex business processes through robust,
+                        scalable, and intelligent software architecture.</p>
+                    <p>We partner with ambitious companies to build platforms that drive real growth. From initial
+                        architecture design to final deployment, we bring a level of technical excellence and strategic
+                        insight that turns ambitious visions into deployed reality.</p>
+                </div>
+                <div class="about-image">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--clr-primary)"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 4rem;">
+                <h2>Our Core Values</h2>
+            </div>
+
+            <div class="values-grid" style="margin-bottom: 6rem;">
+                <div class="value-card">
+                    <h3>Excellence</h3>
+                    <p>We write clean, maintainable code and architect resilient systems that stand the test of time.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <h3>Transparency</h3>
+                    <p>Clear communication, honest timelines, and completely transparent development processes.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Partnership</h3>
+                    <p>We don't just build software; we invest in understanding your business goals and user needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container cta-container glass-panel">
+                <div class="cta-content">
+                    <h2>Join the Sympifytech family</h2>
+                    <p>Let's build something extraordinary together.</p>
+                </div>
+                <div class="cta-action">
+                    <a href="contact.html" class="btn btn-primary btn-large">Start a Conversation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon-svg">
+                            <path d="M12 2L2 7L12 12V22L22 17V7L12 2Z" fill="currentColor" />
+                        </svg>
+                    </span>
+                    Sympifytech
+                </a>
+                <p>Empowering businesses through innovative technology solutions since 2018.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="projects.html">Case Studies</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Sympifytech. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
