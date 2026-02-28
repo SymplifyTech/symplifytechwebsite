@@ -1,0 +1,26 @@
+{
+  "name": "symplifytechwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srijanrana77/symplifytechwebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/srijanrana77/symplifytechwebsite/issues"
+  },
+  "homepage": "https://github.com/srijanrana77/symplifytechwebsite#readme",
+  "devDependencies": {
+    "@supabase/supabase-js": "^2.98.0",
+    "vite": "^7.3.1"
+  }
+}

@@ -210,30 +210,34 @@
 
             <div class="contact-form glass-panel">
                 <h2>Send a Message</h2>
-                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                <form id="contact-form">
                     <div class="form-group">
                         <label for="name">Full Name</label>
-                        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" class="form-control" placeholder="john@company.com" required>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="john@company.com"
+                            required>
                     </div>
 
                     <div class="form-group">
                         <label for="subject">How can we help?</label>
-                        <input type="text" id="subject" class="form-control" placeholder="Project Inquiry" required>
+                        <input type="text" id="subject" name="subject" class="form-control"
+                            placeholder="Project Inquiry" required>
                     </div>
 
                     <div class="form-group">
                         <label for="message">Your Message</label>
-                        <textarea id="message" class="form-control"
+                        <textarea id="message" name="message" class="form-control"
                             placeholder="Tell us about your project requirements..." required></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-large" style="width: 100%; margin-top: 1rem;">Send
+                    <button type="submit" id="submit-btn" class="btn btn-primary btn-large"
+                        style="width: 100%; margin-top: 1rem;">Send
                         Message</button>
+                    <p id="form-status" style="margin-top: 1rem; text-align: center; display: none;"></p>
                 </form>
             </div>
         </section>
@@ -274,7 +278,7 @@
             <p>&copy; 2026 Sympifytech. All rights reserved.</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="/script.js"></script>
 </body>
 
 </html>
